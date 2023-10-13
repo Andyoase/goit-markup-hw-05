@@ -165,6 +165,13 @@ nav li a:hover {
     color: #2196f3;
 }
 
+.current:hover {
+    padding-bottom: 29px;
+    color: var(--link-hover-color);
+    border-bottom: 4px solid #2196f3;
+    border-radius: 2px;
+}
+
 
 .contact-email:hover a,
 .contact-phone:hover a {
