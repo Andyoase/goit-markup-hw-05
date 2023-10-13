@@ -118,6 +118,7 @@ a {
     font-size: 26px;
     line-height: 30.52px;
     margin-right: 93px;
+    width: 15%;
 }
 
 .text-blue {
@@ -144,6 +145,7 @@ nav li a:hover {
     font-weight: 500;
     line-height: 16.41px;
     text-decoration: none;
+    margin-left: 93px;
 }
 
 .nav-container ul {
@@ -164,37 +166,59 @@ nav li a:hover {
 }
 
 
-.nav-contact {
-    color: var(--link-hover-color);
+.contact-email:hover a,
+.contact-phone:hover a {
+    color: var(--link-hover-color);   
+}
+
+.contact-header li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact-header li + li {
+    margin-left: 10px;
+}
+
+.contact-header li a,
+.contact-header li svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.contact-header li:hover a {
+     color: var(--link-hover-color);
+}
+
+.contact-header li:hover svg path {
+    fill: var(--link-hover-color);
+}
+
+.contact-header li a {
     font-family: var(--link-text);
-    text-decoration: none;
-    font-weight: 500;
+    color: var(--link-paragraph-contacts-color);
     font-size: 14px;
-    line-height: 16.41px;
+    font-weight: 500;
 }
 
-.nav-contact {
-    margin-left: 350px;
+.header-container div {
+   width: 50%;
 }
 
-.nav-contact a {
-    padding-right: 20px;
-    color: #757575;
+.contact-header li svg {
+    position: relative;
+    top: -1px;
 }
 
-.nav-contact a:hover {
-   color: #2196F3;
+.contact-header {
+    min-width: 35%;
+    text-align: right;
 }
 
-.contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 4px;
-}
 
 .envelope   {
-    display: inline-block;
+    display:inline;
     width: 1em;
     height: 1em;
     stroke-width: 0;
@@ -204,10 +228,6 @@ nav li a:hover {
     cursor: pointer;
 }
 
-.envelope:hover {
-    width: 1.3330078125em;
-}
-
 
 .smartphone {
    width: 0.625em;
@@ -215,18 +235,14 @@ nav li a:hover {
     
 
 .smartphone {
-    display: inline-block;
+    display: inline;
     width: 1em;
     height: 1em;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
     margin-right: 10px;
-    color: #2196F3;
-}
-
-.smartphone {
-    width: 0.625em;
+    cursor:pointer;
 }
 
 
@@ -462,13 +478,25 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .customer {
     border-radius: 4px;
     border: 1px solid #AFB1B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 90px;
+}
+.customer-container .customer:hover {
+    border-color: #2196F3;
 }
 
+.customer-container .customer:hover svg path{
+    fill: #2196F3;
+}
 
 footer {
     background: #2F303A;
@@ -548,11 +576,25 @@ footer {
   flex-direction: row;
 }
 
-.icons {
-    margin-left: 5px;
-    padding-right: 8px;
+.social-icons li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    clip-path: circle(45%);   
+    border-radius: 50%;
 }
 
+.social-icons li + li {
+    margin-left: 10px;
+}
+
+.social-icons li:hover {
+    background-color:rgba(33, 150, 243, 1);
+    cursor: pointer;
+}
 
 
 /* general */
@@ -583,16 +625,6 @@ footer {
 .text-white {
     color: #fff;
 }
-
-.top-logo {
-    text-decoration: none;
-    font-family: var(--heading-font-family);
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 30.52px;
-    margin-right: 93px;
-}
-
 
 .nav-container  {
     color: var(--link-hover-color);
