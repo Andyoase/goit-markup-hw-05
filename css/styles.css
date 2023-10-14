@@ -740,7 +740,7 @@ a {
     cursor: pointer;
 }
 
-.filters button :focus {
+.filters button:focus {
     color: var(--link-background-color);
     background-color: var(--link-hover-color);
     border-radius: 4px;
