@@ -835,6 +835,16 @@ a {
    text-align: start;
 }
 
+.products-list .text-box  {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .products-list li p {
    color: var(--link-paragraph-contacts-color);
    font-size: 16px;
@@ -868,21 +878,15 @@ a {
 
 .products-list li:hover .box-overlay {
     transform: translatey(0);
+    transition-timing-function: cubic-bezier(0.1,0.7,1.0,0.1);
 }
 
 .products-list li:focus .box-overlay {
     transform: translateY(0);
+    transition-timing-function: cubic-bezier(0.1,0.7,1.0,0.1);
 }
 
-.box-overlay p {
-    color: rgba(255, 255, 255, 1);
-    font-size: 18px;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
+
 
 /* **********
    footer
