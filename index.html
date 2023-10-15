@@ -11,8 +11,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" 
-          href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />  
 </head>
 
 <body class="studio-page">
@@ -57,7 +55,7 @@
         <section id="section" class="banner-section">
             <div class="banner-container container">
                 <h1>EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
-                <button class="button-service">Request our service</button>
+                <button data-modal-open class="button-service">Request our service</button>
             </div>
         </section>
 
@@ -714,5 +712,14 @@
             </div>
         </div>
     </footer>
+
+    <!--Request our Service Modal-->
+  <div class="modal" data-modal>
+    <div class="modal-content">
+      <button class="close-btn" data-modal-close>&times;</button>
+    </div>
+  </div>
+
+  <script src="./js/modal.js"></script>
 </body>
 </html>
