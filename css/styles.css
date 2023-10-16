@@ -655,6 +655,8 @@ footer {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
+    z-index: 999999;
+
 }
 
 .modal-content {
@@ -663,21 +665,36 @@ footer {
     height: 581px;
     padding: 20px;
     border: 1px solid #888;
+    position: relative;
+    opacity: 1;
+    transition: opacity .5s linear;
     
 }
 
 .is-hidden {
     visibility: hidden;
+   
+}
+
+.is-hidden .modal-content  {
+    opacity: 0;
+    transition: visibility 0s .5s, opacity .5s linear;
 }
 
 .close-btn {
-    background-color: red;
-    border: 1px solid red;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
     color: black;
     cursor: pointer;
     position: absolute;
-    top:0;
-    right:0;
+    top:8px;
+    right:8px;
+    background: none;
+    font-size: 25px;
+    line-height: 30px;
 }
 
 
@@ -812,9 +829,8 @@ a {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 26px;
     letter-spacing: 0.48px;
-    padding: 5px 25px; 
+    padding: 10px 25px; 
     cursor: pointer;
 }
 
@@ -907,9 +923,11 @@ a {
     width: 100%;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
-    
     transform:translatey(100%);
     transition: transform 250ms ease-in-out;
+    display: flex;
+    padding-inline: 24px;
+    box-sizing: border-box;
 }
 
 .products-list li:hover .box-overlay {
