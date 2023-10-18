@@ -673,7 +673,6 @@ footer {
 .is-hidden {
     visibility: hidden;
     display: none;
-   
 }
 
 .is-hidden .modal-content  {
