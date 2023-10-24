@@ -697,8 +697,13 @@ footer {
     top:8px;
     right:8px;
     background: none;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 29px;
+    line-height: 18px;
+}
+
+.close-btn:hover {
+    color: #0060b6;
+    cursor: pointer;
 }
 
 
